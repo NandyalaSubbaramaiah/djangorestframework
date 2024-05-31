@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Pie Chart</title>
+</head>
+<body>
+    <h1>Pie Chart</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate Pie Chart</button>
+    </form>
+    {% if data %}
+        <img src="data:image/png;base64,{{ data }}" alt="Pie chart">
+    {% endif %}
+    
+</body>
+</html>
