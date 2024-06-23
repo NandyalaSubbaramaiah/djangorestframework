@@ -34,3 +34,7 @@ urlpatterns = [
     path('', include('chartjsapp.urls')),
 ]
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('student.urls')),
+]
