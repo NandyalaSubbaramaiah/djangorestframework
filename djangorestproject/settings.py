@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'myapi',
     'myapp',
     'chartjsapp',
+    'student',
+    'database',
 ]
 
 MIDDLEWARE = [
@@ -82,8 +84,12 @@ WSGI_APPLICATION = 'djangorestproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'subbuproject',  # Replace with your database name
+        'USER': 'root',
+        'PASSWORD': '',  # Replace with your MySQL root password if you have set one
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
